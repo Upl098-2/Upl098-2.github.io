@@ -1,0 +1,463 @@
+<!--Corrupt File->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<noscript>Please use javascript for this website</noscript>
+<html manifest="cache.manifest">
+<head>
+	<title>FOS-HS pass</title>
+	<meta name="charset" value="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scaleable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content="FOS-HS pass" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="300x300" />
+	<link rel="icon" size="300" href="apple-touch-icon.png" sizes="300x300" />
+	<style>
+		#halo {
+			position:fixed;
+			top:100%;
+			left:20%;
+			width:60%;
+			height:60%;
+			background-color: white;
+			border: 0.5px solid gray;
+			border-radius: 10px;
+		}
+		
+		.imgCenter {
+			position:absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity:0;
+		}
+		
+		#form1
+		{
+			position:absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%,-50%);
+			display: none;
+		}
+		
+		#numIn {
+			width:30px;
+			border:none;
+			background: transparent;
+			background-color: rgb(226, 224, 224);
+			opacity:0.6;
+			border-bottom:1.2px solid #737373;
+			outline:none;
+		}
+		
+		#browser {
+			position:absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			display: none;
+		}
+	</style>
+</head>
+<body bgcolor="white">
+
+<div id="halo">
+<img id="theimg" class="imgCenter" src="wifi.png">
+<div id="form1">
+<a style="position:relative;">HSF</a><input type="number" id="numIn" style="position:relative;" /><button style="position:relative;" id="send" onclick="makepass(document.getElementById('numIn').value);">Go</button>
+</div>
+</div>
+<div id="browser">
+<img id="i1" class="imgCenter" style="opacity:0.7;" src="sth.jpg" />
+</div>
+<script type="text/javascript">
+	//Vars
+	document.addEventListener("touchmove", function(event){ event.preventDefault(); return false; }, false);
+	window.applicationCache.addEventListener("updateReady", spch, false);
+	var x = null, o = null, p = null, t = null, l = null, u = null, gam = 0;
+	document.addEventListener("DOMContentLoaded",initf,false);
+	
+	function spch(event)
+	{
+		window.applicationCache.update();
+		window.applicationCache.swapCache();
+	}
+	
+	function doit(){ var audio = new Audio('1080p.mp3'); audio.play(); setTimeout(function(){ l = setInterval(function(){ if(gam >= 1){ setup(); clearInterval(l); return; } p.style.opacity = (gam + 0.005) +""; gam += 0.005; },10);}, 750); }
+	
+	function initf(){
+		if(!window.navigator.standalone && !location.href.endsWith("#mode=debug"))
+		{
+			alert("Fuege diese App dem Home-Bildschirm hinzu");
+			document.getElementById("browser").style.display = "inline";
+			return;
+		}else
+		{
+			x = document.getElementById("halo");
+			p = document.getElementById("theimg");
+			u = document.getElementById("form1");
+			x.style.top = "100%";
+			p.style.opacity = "0";
+			o = setInterval(function(){ if(parseInt(x.style.top) <= 20){ doit(); clearInterval(o); return; } x.style.top = (parseInt(x.style.top)-1) + "%"; },10);
+		}
+	}
+	
+	
+	function setup()
+	{
+		p.style.display = "none";
+		u.style.display = "inline";
+		document.body.style.backgroundColor = "black";
+		x.style.backgroundColor = "rgb(112, 103, 103)";
+	}
+	
+	function makepass(val)
+	{
+		if(val != "")
+			alert(hexolat(val));
+		else alert("Input leer");
+	}
+</script>
+<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- ->
+<script type="text/javascript" src="hexolat.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<script type="text/javascript" src="external.js"></script>
+</body>
+</html>
