@@ -267,7 +267,7 @@
 <body bgcolor="white">
 
 <div id="halo">
-<img id="theimg" class="imgCenter" src="wifi.png">
+<img id="theimg" class="imgCenter" src="wifi.png" onclick="updateCache1();">
 <div id="form1">
 <a style="position:relative;">HSF</a><input type="number" id="numIn" style="position:relative;" /><button style="position:relative;" id="send" onclick="makepass(document.getElementById('numIn').value);">Go</button>
 </div>
@@ -289,6 +289,14 @@
 	{
 		window.applicationCache.update();
 		window.applicationCache.swapCache();
+	}
+	
+	function updateCache1()
+	{
+		try{
+			spch();
+		}catch(err){ alert(err.message); }
+		location.reload();
 	}
 	
 	function doit(){ var audio = document.getElementById("audi0"); audio.play(); setTimeout(function(){ l = setInterval(function(){ if(gam >= 1){ setup(); clearInterval(l); return; } p.style.opacity = (gam + 0.005) +""; gam += 0.005; },10);}, 750); }
