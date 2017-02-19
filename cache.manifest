@@ -1,12 +1,11 @@
 CACHE MANIFEST
 #sfgsdfgd
 
-
-FALLBACK:
-/index.html /hexolat.html
-/1080p.mp3 about:blank
-/sth.jpg about:blank
-/wifi.png about:blank
+/hexolat.html
+/external.js
+/wifi.png
+/1080p.mp3
+/sth.jpg
 
 CACHE:
 /hexolat.html
@@ -14,10 +13,3 @@ CACHE:
 /wifi.png
 /1080p.mp3
 /sth.jpg
-
-NETWORK:
-/cache.manifest
-/sth.jpg
-/1080p.mp3
-/wifi.png
-/hexolat.html
