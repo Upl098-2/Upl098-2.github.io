@@ -1,5 +1,5 @@
-const ALIVE = 0,
-      DEAD = 1,
+const ALIVE = 1,
+      DEAD = 0,
       NOTHING = 0,
       KILL = 1,
       BIRTH = 2;
