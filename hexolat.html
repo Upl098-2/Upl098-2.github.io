@@ -278,26 +278,31 @@
 <audio id="audi0" style="display:none">
 	<source src="1080p.mp3" type="audio/mpeg">
 </audio>
+
+<script type="text/javascript">
+	window.addEventListener('load', function(e) {
+		window.applicationCache.addEventListener('updateready', function(e) {
+			if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+				// Browser downloaded a new app cache.
+				// Swap it in and reload the page to get the new hotness.
+				window.applicationCache.swapCache();
+				if (confirm('A new version of this site is available. Load it?')) {
+					window.location.reload();
+				}
+			} else {
+				// Manifest didn't changed. Nothing new to server.
+			}
+		}, false);
+		window.applicationCache.update();
+	}, false);
+</script>
+
 <script type="text/javascript">
 	//Vars
+	
 	document.addEventListener("touchmove", function(event){ event.preventDefault(); return false; }, false);
-	window.applicationCache.addEventListener("updateReady", spch, false);
 	var x = null, o = null, p = null, t = null, l = null, u = null, gam = 0;
 	document.addEventListener("DOMContentLoaded",initf,false);
-	
-	function spch(event)
-	{
-		window.applicationCache.update();
-		window.applicationCache.swapCache();
-	}
-	
-	function updateCache1()
-	{
-		try{
-			spch();
-		}catch(err){ alert(err.message); }
-		location.reload();
-	}
 	
 	function doit(){ var audio = document.getElementById("audi0"); audio.play(); setTimeout(function(){ l = setInterval(function(){ if(gam >= 1){ setup(); clearInterval(l); return; } p.style.opacity = (gam + 0.005) +""; gam += 0.005; },10);}, 750); }
 	

@@ -1,7 +1,9 @@
 CACHE MANIFEST
+#sfgsdfgdsdfgv
+
 
 FALLBACK:
-/ /hexolat.html
+/index.html /hexolat.html
 /1080p.mp3 about:blank
 /sth.jpg about:blank
 /wifi.png about:blank
