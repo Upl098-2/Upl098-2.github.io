@@ -1,0 +1,19 @@
+CACHE MANIFEST
+# 19.02.17
+
+
+index.html
+icon1.png
+ytool.js
+cell.js
+sketch.js
+
+CACHE:
+index.html
+icon1.png
+ytool.js
+cell.js
+sketch.js
+
+FALLBACK:
+index.html about:blank
