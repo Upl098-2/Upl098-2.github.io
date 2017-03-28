@@ -1,0 +1,16 @@
+%head
+
+meta name="charset" content="utf8"
+meta name="viewport" content="width=device-width"
+meta name="generator" content="smlss-compiler"
+
+title
+    "WOS"
+
+%body
+
+script src="ytool.js"
+script src="wos.js"
+script src="sketch.js"
+
+%end
