@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Testing
+</title>
+<link rel="stylesheet" href="mono_styles.css"/>
+</head>
+<body>
+<script src="mono.js">
+</script>
+<script>
+window.onload = function ()
+{
+var lst = new List();
+lst.width = "500px";
+lst.height = "200px";
+
+lst.newChild( "test", "test", "{}" );
+lst.newChild( "another", "another", "{}" );
+lst.newChild( "outside", "outside", "{}" );
+
+lst.html().appendTo( document.body );
+};
+
+</script>
+</body>
+</html>

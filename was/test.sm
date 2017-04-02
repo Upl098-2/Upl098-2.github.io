@@ -1,0 +1,25 @@
+%head
+
+title
+    "Testing"
+
+link rel="stylesheet" href="mono_styles.css"
+
+%body
+
+script src="mono.js"
+script
+    window.onload = function ()
+    {
+        var lst = new List();
+        lst.width = "500px";
+        lst.height = "200px";
+
+        lst.newChild( "test", "test", "{}" );
+        lst.newChild( "another", "another", "{}" );
+        lst.newChild( "outside", "outside", "{}" );
+
+        lst.html().appendTo( document.body );
+    };
+
+%end
