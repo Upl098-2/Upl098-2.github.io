@@ -164,7 +164,7 @@ List.prototype.html = function()
 {
     var root = new Element( "DIV" );
     root.set("class", "mono_list");
-    root.set("ontouchstart", "dragging = true; event.preventDefault();");
+    root.set("ontouchstart", "dragging = true;");
     root.set("ontouchend", "dragging = false;");
     root.set("style", "width:" + this.width + "; height:" + this.height + ";");
     var el;
