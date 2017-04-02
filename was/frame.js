@@ -127,7 +127,7 @@ function showDefaultOverlay()
 
             lst.newChild( "NavBar", "Navigation bar",  '{ "tagname":"div", "style": "' + __navbar__ + '" }' );
             lst.newChild( "Label", "Text Label", '{ "tagname":"span", "style": "'+ __label__ +'", "children": { "c1": { "tagname":"__text__", "text": "Label" } } }' );
-            lst.newChild( "Image", "Image from url", '{ "tagname": "img", "style": "position: absolute; top:0px; left:0px; width:25%; height:25%;" }' );
+            lst.newChild( "Image", "Image from url", '{ "tagname": "img", "style": "position: absolute; z-index:1; top:0px; left:0px; width:25%; height:25%;" }' );
 
             var group = new Element("DIV");
 
