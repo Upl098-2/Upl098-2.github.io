@@ -89,8 +89,6 @@ computer.beep(1000,0.2)
 writeln("not calling /init.lua ...")
 --init()
 writeln("quitting...")
-local a
-while true do
-    a=0
-end
+
+error("nobody is perfect.")
     
