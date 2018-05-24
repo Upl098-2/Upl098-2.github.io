@@ -22,9 +22,30 @@ end
 do
     local screen = component.list("screen")()
     local gpu = component.list("gpu")()
+    local w, h
     if gpu and screen then
         boot_invoke(gpu, "bind", screen)
+        component.invoke(gpu, "bind", screen)
+        w, h = component.invoke(gpu, "maxResolution")
+        component.invoke(gpu, "setResolution", w, h)
+        component.invoke(gpu, "setBackground", 0x000000)
+        component.invoke(gpu, "setForeground", 0xFFFFFF)
+        component.invoke(gpu, "fill", 1, 1, w, h, " ")
     end
+end
+
+local y = 1
+local function writeln( txt )
+    if gpu and screen then
+        component.invoke(gpu, "set", 1, y, txt)
+        if y == h then
+            component.invoke(gpu, "copy", 1, 2, w, h - 1, 0, -1)
+            component.invoke(gpu, "fill", 1, h, w, 1, " ")
+        else
+            y = y + 1
+        end
+    end
+end
 end
 
 local function loadaddr(addr)
@@ -44,13 +65,17 @@ local function loadaddr(addr)
     return load(buffer, "=init")
 end
 
+writeln("Trying to find boot devices...")
+
 local init, reason
 if computer.getBootAddress() then
+    writeln("Trying '" .. computer.getBootAddress() .. "'")
     init, reason = loadaddr(computer.getBootAddress())
 end
 if not init then
     computer.setBootAddress()
     for addr in component.list("filesystem") do
+        writeln("Trying '" .. addr .. "'")
         init, reason = loadaddr(addr)
         if init then
             computer.setBootAddress(addr)
@@ -62,4 +87,6 @@ if not init then
     error("no bootable medium found!")
 end
 computer.beep(1000,0.2)
+writeln("calling /init.lua ...")
+os.sleep(2)
 init()
