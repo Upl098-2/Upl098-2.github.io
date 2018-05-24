@@ -46,7 +46,6 @@ local function writeln( txt )
         end
     end
 end
-end
 
 local function loadaddr(addr)
     local handle, reason = boot_invoke(addr, "open", "/init.lua")
