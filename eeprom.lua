@@ -87,5 +87,4 @@ if not init then
 end
 computer.beep(1000,0.2)
 writeln("calling /init.lua ...")
-os.sleep(2)
 init()
