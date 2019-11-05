@@ -1,0 +1,27 @@
+.grid-1x2 {
+	position: absolute;
+	
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto;
+	
+	width:  50%;
+	left:   50%;
+	transform: translateX(-50%);
+	
+	overflow-x: hidden;
+}
+
+img.stretched {
+	width: 100%;
+}
+
+img.changeable {
+	cursor: pointer;
+}
+
+img.changeable:not([src]) {
+	min-height: 44px;
+	background-color: gray;
+	border-bottom: 1px dashed black;
+}
