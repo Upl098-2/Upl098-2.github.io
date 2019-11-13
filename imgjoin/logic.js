@@ -31,6 +31,12 @@ window.onload = function() {
 				.then(canvas=>window.open(canvas.toDataURL(),"_blank"));
 		}
 	}, true);
+	
+	document.body.addEventListener("touchdown", event => {
+		if(event.touches.length == 3)
+			html2canvas(grid)
+				.then(canvas=>window.open(canvas.toDataURL(),"_blank"));
+	}, true);
 };
 
 function getFile() {
